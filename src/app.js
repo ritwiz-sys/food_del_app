@@ -69,6 +69,7 @@ app.post('/orders', (req, res) => {
   return res.status(201).json(order);
 });
 
+// Retrieve a previously placed order by ID.
 app.get('/orders/:id', (req, res) => {
   const order = orders.get(Number(req.params.id));
 
